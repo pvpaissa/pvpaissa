@@ -1,0 +1,19 @@
+1.0.1: Initial version.
+1.1.0:
+    - Added Party and Daily Cron
+    - add_players_tables.php
+1.2.0:
+    - Added Weekly Summary
+    - Updated views for people knocked off top 100.
+1.3.0: Added profiles.
+1.4.0:
+    - Categories now support nesting.
+    - Frontlines added.
+    - Queues added for Frontlines weekly crawl.
+1.5.0:
+    - Final update for this plugin.
+    - Queues for Feast and Frontlines.
+    - Grab all Feast tiers.
+    - Better rankings for Feast and Frontlines.
+2.0.1:
+    - Refactored Feast and Frontlines sections to their own plugin.
