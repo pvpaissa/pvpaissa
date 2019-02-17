@@ -1,12 +1,12 @@
 <?php
 
-namespace Cleanse\Pvpaissa\Models;
+namespace Cleanse\PvPaissa\Models;
 
 use Model;
 
 /**
  * Class Player
- * @package Cleanse\Pvpaissa\Models
+ * @package Cleanse\PvPaissa\Models
  *
  * @property integer id
  * @property integer user_id
@@ -75,7 +75,7 @@ class Player extends Model
     /**
      * Automatically links a player to a user if not one already.
      * @param  Cleanse\User\Models\User $user
-     * @return Cleanse\Pvpaissa\Models\Player
+     * @return Cleanse\PvPaissa\Models\Player
      */
     public static function getFromUser($user = null)
     {

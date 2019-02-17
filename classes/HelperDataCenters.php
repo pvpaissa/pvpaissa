@@ -1,6 +1,6 @@
 <?php
 
-namespace Cleanse\Pvpaissa\Classes;
+namespace Cleanse\PvPaissa\Classes;
 
 class HelperDataCenters
 {
@@ -90,7 +90,8 @@ class HelperDataCenters
         return key($this->getParentStack($server, $datacenters));
     }
 
-    private function getParentStack($child, $stack) {
+    private function getParentStack($child, $stack)
+    {
         foreach ($stack as $k => $v) {
             if (is_array($v)) {
                 // If the current element of the array is an array, recurse it and capture the return

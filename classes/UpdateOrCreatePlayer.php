@@ -1,11 +1,11 @@
 <?php
 
-namespace Cleanse\Pvpaissa\Classes;
+namespace Cleanse\PvPaissa\Classes;
 
-use Cleanse\Pvpaissa\Models\Player;
 use Cleanse\Feast\Classes\UpdateSolo;
 use Cleanse\Feast\Classes\UpdateParty;
 use Cleanse\Frontlines\Classes\UpdateFrontlines;
+use Cleanse\PvPaissa\Models\Player;
 
 class UpdateOrCreatePlayer
 {

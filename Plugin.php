@@ -1,11 +1,11 @@
 <?php
 
-namespace Cleanse\Pvpaissa;
+namespace Cleanse\PvPaissa;
 
 use DateTime;
 use Event;
 use System\Classes\PluginBase;
-use Cleanse\Pvpaissa\Models\Player;
+use Cleanse\PvPaissa\Models\Player;
 
 class Plugin extends PluginBase
 {
@@ -22,8 +22,8 @@ class Plugin extends PluginBase
     public function registerComponents()
     {
         return [
-            'Cleanse\Pvpaissa\Components\Profile'   => 'cleansePvPaissaProfile',
-            'Cleanse\Pvpaissa\Components\Verify'    => 'cleansePvPaissaVerify'
+            'Cleanse\PvPaissa\Components\Profile'   => 'cleansePvPaissaProfile',
+            'Cleanse\PvPaissa\Components\Verify'    => 'cleansePvPaissaVerify'
         ];
     }
 

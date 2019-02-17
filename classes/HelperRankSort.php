@@ -1,6 +1,6 @@
 <?php
 
-namespace Cleanse\Pvpaissa\Classes;
+namespace Cleanse\PvPaissa\Classes;
 
 class HelperRankSort
 {

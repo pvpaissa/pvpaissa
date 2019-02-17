@@ -1,14 +1,14 @@
 <?php
 
-namespace Cleanse\Pvpaissa\Classes;
+namespace Cleanse\PvPaissa\Classes;
 
 use Auth;
 use GuzzleHttp;
 use Log;
 use Carbon\Carbon;
 use Symfony\Component\DomCrawler\Crawler;
-use Cleanse\Pvpaissa\Classes\HelperDataCenters;
-use Cleanse\Pvpaissa\Models\Player;
+use Cleanse\PvPaissa\Classes\HelperDataCenters;
+use Cleanse\PvPaissa\Models\Player;
 
 class VerifyPlayer
 {

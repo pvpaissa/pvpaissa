@@ -1,0 +1,89 @@
+<div class="basic-page">
+    <div class="container">
+        <div class="page-title">
+            <h1>{{ character.name }}</h1>
+            <div class="sub-box"></div>
+        </div>
+
+        <div class="container basic-content">
+            <div class="p-3 d-flex">
+                <div class="d-none d-md-flex">
+                    <a target="_blank" class=""
+                       href="http://na.finalfantasyxiv.com/lodestone/character/{{ character.character }}/">
+                        <img src="{{ character.avatar }}" title="{{ character.character }} Avatar">
+                    </a>
+                </div>
+
+                <div class="ml-md-auto">
+                    <h4>{{ character.server }}</h4>
+                    <p class="lead text-secondary">{{ character.data_center }}</p>
+                </div>
+            </div>
+            <hr>
+            <div class="d-flex flex-column flex-lg-row justify-content-between text-center">
+                <div class="m-2 p-3">
+                    <img class="img-fluid" title="Feast Rankings for {{ character.character }}"
+                         src="/themes/pvpaissa_organization/assets/images/feast-rankings.png">
+
+                    <div class="d-flex justify-content-around">
+                        {% if character.solo.count > 0 %}
+                        <div class="feast-solo">
+                            <p class="text-uppercase">
+                                Solo -
+                                <a href="/feast/solo/{{ character.solo.first.season }}">
+                                    S{{ character.solo.first.season }}
+                                </a>
+                            </p>
+                            <a href="/character/{{ character.character }}/feast/{{ character.solo.first.season }}">
+                                <img class="img-fluid" title="Feast Rankings for {{ character.character }}"
+                                     src="/themes/pvpaissa_organization/assets/images/feast-diamond.png">
+                                <h3>
+                                    {{ character.solo.first.rating }}
+                                </h3>
+                            </a>
+                        </div>
+                        {% endif %}
+
+                        {% if character.party.count > 0 %}
+                        <div class="feast-party">
+                            <p class="text-uppercase">
+                                Light Party -
+                                <a href="/feast/party/{{ character.party.first.season }}">
+                                    S{{ character.party.first.season }}
+                                </a>
+                            </p>
+                            <a href="/character/{{ character.character }}/feast/{{ character.party.first.season }}">
+                                <img class="img-fluid" title="Feast Rankings for {{ character.character }}"
+                                     src="/themes/pvpaissa_organization/assets/images/feast-diamond.png">
+                                <h3>
+                                    {{ character.party.first.rating }}
+                                </h3>
+                            </a>
+                        </div>
+                        {% endif %}
+                    </div>
+
+                    <hr class="d-block d-md-block d-lg-none">
+                </div>
+
+                {% if character.frontlines %}
+                <div class="p-3 m-2">
+                    <a href="/character/{{ character.character }}/frontlines">
+                        <img class="img-fluid" title="Frontline Rankings for {{ character.character }}"
+                             src="/themes/pvpaissa_organization/assets/images/frontlines-rankings.png">
+                        <h3>
+                            {% if character.grand_company in gcs %}
+                            <img title="Grand Company - {{ character.grand_company }}"
+                                 src="/themes/pvpaissa_organization/assets/images/gc-flag-{{ character.grand_company|slug }}.png">
+                            {% endif %}
+                            {{ character.frontlines.wins }} Wins
+                        </h3>
+                    </a>
+
+                    <hr class="d-block d-md-block d-lg-none">
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>

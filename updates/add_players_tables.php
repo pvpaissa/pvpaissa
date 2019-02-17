@@ -1,6 +1,6 @@
 <?php
 
-namespace Cleanse\Pvpaissa\Updates;
+namespace Cleanse\PvPaissa\Updates;
 
 use Schema;
 use October\Rain\Database\Updates\Migration;
