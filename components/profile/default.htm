@@ -21,6 +21,7 @@
             </div>
             <hr>
             <div class="d-flex flex-column flex-lg-row justify-content-between text-center">
+                {% if (character.solo.count > 0) or (character.party.count > 0) %}
                 <div class="m-2 p-3">
                     <img class="img-fluid" title="Feast Rankings for {{ character.character }}"
                          src="/themes/pvpaissa_organization/assets/images/feast-rankings.png">
@@ -61,6 +62,7 @@
 
                     <hr class="d-block d-md-block d-lg-none">
                 </div>
+                {% endif %}
 
                 {% if character.frontlines %}
                 <div class="p-3 m-2">
