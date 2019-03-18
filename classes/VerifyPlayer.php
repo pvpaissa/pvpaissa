@@ -43,15 +43,21 @@ class VerifyPlayer
 
     public function checkIfVerified()
     {
+        //Make sure user is logged in.
         $user = Auth::getUser();
 
+        //If not logged in, do nothing.
         if (!$user) {
             return null;
         }
 
+        //Get player 'verification_code' field for comparison.
         $needle = Player::where('character', $this->code)->first();
+        //Guzzle (web crawler lib) the character's profile.
         $haystack = $this->guzzleCharacterPage();
-
+        
+        //Check if the db's 'verification_code' is in the message of Character's Lodestone profile "message box"
+        //If needle is in haystack, update database fields proving character belongs to User.
         if (strpos($haystack, $needle->verification_code) !== false) {
             $needle->user = $user;
             $needle->verified_at = Carbon::now()->toDateTimeString();
@@ -60,6 +66,7 @@ class VerifyPlayer
             return true;
         }
 
+        //Else User is not verified.
         return false;
     }
 
@@ -87,6 +94,7 @@ class VerifyPlayer
             return;
         }
 
+        //Return the text in Character Profile message box.
         return $crawler->filterXPath('//*[@id="character"]/div[2]/div[3]')->text();
     }
 
