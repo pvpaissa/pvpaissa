@@ -73,11 +73,15 @@ class HelperDataCenters
         ],
         'Chaos' => [
             'Cerberus',
-            'Lich',
+            'Louisoix',
             'Moogle',
+            'Omega',
+            'Ragnarok',
+        ],
+        'Light' => [
+            'Lich',
             'Odin',
             'Phoenix',
-            'Ragnarok',
             'Shiva',
             'Zodiark'
         ]
