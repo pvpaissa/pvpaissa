@@ -43,32 +43,34 @@ class HelperDataCenters
             'Shinryu',
             'Titan'
         ],
+        'Crystal' => [
+            'Balmung',
+            'Brynhildr',
+            'Coeurl',
+            'Diabolos',
+            'Goblin',
+            'Malboro',
+            'Mateus',
+            'Zalera'
+        ],
         'Aether' => [
             'Adamantoise',
-            'Balmung',
             'Cactuar',
-            'Coeurl',
             'Faerie',
             'Gilgamesh',
-            'Goblin',
             'Jenova',
-            'Mateus',
             'Midgardsormr',
             'Sargatanas',
-            'Siren',
-            'Zalera'
+            'Siren'
         ],
         'Primal' => [
             'Behemoth',
-            'Brynhildr',
-            'Diabolos',
             'Excalibur',
             'Exodus',
             'Famfrit',
             'Hyperion',
             'Lamia',
             'Leviathan',
-            'Malboro',
             'Ultros'
         ],
         'Chaos' => [
